@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import sqlite3
 import time
 #conn = sqlite3.connect("notes.db")
@@ -103,7 +102,6 @@ def delete_note_by_id(conn,note_id):
         return True
     else:
         return False
-=======
 import sqlite3
 #conn = sqlite3.connect("notes.db")
 #cursor = conn.cursor()
@@ -169,8 +167,6 @@ def get_all_notes(conn):
 
 #U
 
-
-
 def update_note_title_content(conn,note_id, new_title=None, new_content=None):
     set_clauses = []
     params = []
@@ -202,4 +198,3 @@ def delete_note_by_id(conn,note_id):
         return True
     else:
         return False
->>>>>>> 0ed25b50bdc9f3d6eb1c92c243dd046c55582d16
