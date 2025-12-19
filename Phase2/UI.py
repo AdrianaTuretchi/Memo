@@ -50,10 +50,8 @@ class NotesApp:
             return
 
         if self.current_note_id is None:
-            # Notă nouă (C din CRUD)
             CRUD.create_text_note(self.conn, titlu, continut)
         else:
-            # Update (U din CRUD)
             CRUD.update_note_title_content(self.conn, self.current_note_id, titlu, continut)
 
         self.refresh_lista()
@@ -65,7 +63,6 @@ class NotesApp:
             index = selection[0]
             data = self.listbox.get(index)
             id_nota = int(data.split(":")[0])
-
             nota = CRUD.get_note_by_id(self.conn, id_nota)
             if nota:
                 self.current_note_id = id_nota
